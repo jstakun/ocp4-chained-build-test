@@ -4,7 +4,7 @@ FROM openjdk:11-jdk-slim-buster AS builder
 COPY . /opt/app-root/
 
 WORKDIR /opt/app-root
-RUN chmod a+rwx gradle && ./gradle build -x test -s --continue
+RUN chmod a+rwx gradlew && ./gradlew build -x test -s --continue
 
 #RUN ./gradlew build
 #RUN gradle build
