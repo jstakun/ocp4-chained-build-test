@@ -5,6 +5,7 @@ COPY . /opt/app-root/
 
 WORKDIR /opt/app-root
 RUN chmod a+rwx gradlew && ./gradlew build -x test -s --continue
+RUN ls -al
 
 #RUN ./gradlew build
 #RUN gradle build
