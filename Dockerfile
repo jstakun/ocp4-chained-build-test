@@ -1,4 +1,4 @@
-FROM openjdk:11-jdk-slim-buster
+FROM openjdk-11-rhel7:1.1
 #FROM amd64/gradle:latest AS builder
 
 COPY . /opt/app-root/
