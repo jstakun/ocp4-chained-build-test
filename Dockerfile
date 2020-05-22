@@ -3,8 +3,13 @@ FROM openjdk:11-jdk-slim-buster
 
 COPY . /opt/app-root/
 
-WORKDIR /opt/app-root
-RUN chmod a+rwx gradlew && ./gradlew build -x test && cp /opt/app-root/build/libs/*.*ar ./app.jar && rm -rf /opt/app-root/build/ && ls -al
+#WORKDIR /opt/app-root
+RUN cd /opt/app-root && 
+    chmod a+rwx gradlew && 
+    ./gradlew build -x test && 
+    cp /opt/app-root/build/libs/*.*ar ./app.jar && 
+    rm -rf /opt/app-root/build/ && 
+    ls -al
 
 #RUN ./gradlew build
 #RUN gradle build
